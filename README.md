@@ -232,5 +232,5 @@ export type TUserAvatar = Pick<IUser, 'avatar'>;
 - setUserInfo(userData: TUserPublicInfo): void - устанавливает данные в элементы разметки блока
 
 
-
+ 
 

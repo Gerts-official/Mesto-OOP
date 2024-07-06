@@ -20,17 +20,16 @@ export interface ICardsData {
     preview: string | null;
     addCard(card: ICard): void;
     deleteCard(cardID: string, payload: Function | null): void;
-    updateCard(cardID: string, payload: Function | null): void;
+    updateCard(card: ICard, payload: Function | null): void;
     getCard(cardID: string): ICard;
     checkValidation(data: Record<keyof TCardInfo, string>): boolean;
 }
 
-export interface IUserData {
-    getUserInfo(): TUserPublicInfo;
-    setuserInfo(userData: IUser): void;
-    checkUserValidation(data: Record<keyof TUserPublicInfo, string>): boolean;
+export interface IUserData{
+	getUserInfo(): TUserPublicInfo;
+	setUserInfo(userData: IUser): void;
+	checkUserValidation(data: Record<keyof TUserPublicInfo, string>): boolean;
 }
-
 
 export type TCardInfo = Pick<ICard, 'name' | 'link'>;
 export type TUserPublicInfo = Pick<IUser, 'name' | 'about' | 'avatar'>;

@@ -133,3 +133,5 @@ export function createElement<
     }
     return element;
 }
+
+export const validate = require("validate.js");
