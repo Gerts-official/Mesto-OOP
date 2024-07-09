@@ -1,43 +1,55 @@
 import './blocks/index.css';
 import { AppApi } from './components/AppApi';
 import { Card } from './components/Card';
+import { CardsContainer } from './components/CardsContainer';
 import { CardData } from './components/CardsData';
 import { UserData } from './components/UserData';
+import { UserInfo } from './components/UserInfo';
 import { Api } from './components/base/api';
 import { EventEmitter, IEvents } from './components/base/events';
 import { IApi } from './types';
 import { API_URL, settings } from './utils/constants';
 import { testCards, testUser } from './utils/tempConstants';
+import { cloneTemplate } from './utils/utils';
 
 
-const events: IEvents = new EventEmitter();
+const events = new EventEmitter();
 
 const baseApi: IApi = new Api(API_URL, settings);
 const api = new AppApi(baseApi);
 
 const cardsData = new CardData(events);
 const userData = new UserData(events);
+const userView = new UserInfo(document.querySelector('.profile'), events);
 
-const cardTemplate: HTMLTemplateElement = 
-    document.querySelector('.card-template');
+const cardTemplate: HTMLTemplateElement =
+	document.querySelector('.card-template');
 
+  const cardsContainer = new CardsContainer(
+    document.querySelector('.places__list')
+  );
+
+events.onAll((event) => {
+    console.log(event.eventName, event.data)
+})
 
 // Получаем карточки с сервера
-Promise.all([
-    api.getUser(), 
-    api.getCards()])
+Promise.all([api.getUser(), api.getCards()])
 	.then(([userInfo, initialCards]) => {
 		userData.setUserInfo(userInfo);
 		cardsData.cards = initialCards;
-        console.log(cardsData.cards)
-        console.log(userData.getUserInfo())
+        events.emit('initialData: loaded')
 	})
 	.catch((err) => {
 		console.error(err);
 	});
 
-const testSection = document.querySelector('.places')as HTMLTemplateElement;
+events.on('initialData: loaded', () => {
+    const cardsArray = cardsData.cards.map((card) => {
+        const cardInstant = new Card(cloneTemplate(cardTemplate), events);
+        return cardInstant.render(card, userData.id);
+    })
 
-const card = new Card (cardTemplate, events);
-card.setData(testCards[0], testUser._id);
-testSection.append(card.render())
+    cardsContainer.render({catalog:cardsArray});
+    userView.render(userData.getUserInfo());
+})

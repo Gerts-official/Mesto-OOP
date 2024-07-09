@@ -1,9 +1,9 @@
 import { ICard, IUser } from '../types';
 import { cloneTemplate } from '../utils/utils';
+import { Component } from './base/Component';
 import { IEvents } from './base/events';
 
-export class Card {
-	protected element: HTMLElement;
+export class Card extends Component<ICard> {
 	protected events: IEvents;
 	protected likeButton: HTMLButtonElement;
 	protected likesCount: HTMLElement;
@@ -12,15 +12,15 @@ export class Card {
 	protected cardTitle: HTMLElement;
 	protected cardId: string;
 
-	constructor(template: HTMLTemplateElement, events: IEvents) {
+	constructor(protected container: HTMLElement, events: IEvents) {
+		super(container);
 		this.events = events;
-		this.element = cloneTemplate(template);
 
-		this.likeButton = this.element.querySelector('.card__like-button');
-		this.likesCount = this.element.querySelector('.card__like-count');
-		this.deleteButton = this.element.querySelector('.card__delete-button');
-		this.cardImage = this.element.querySelector('.card__image');
-		this.cardTitle = this.element.querySelector('.card__title');
+		this.likeButton = this.container.querySelector('.card__like-button');
+		this.likesCount = this.container.querySelector('.card__like-count');
+		this.deleteButton = this.container.querySelector('.card__delete-button');
+		this.cardImage = this.container.querySelector('.card__image');
+		this.cardTitle = this.container.querySelector('.card__title');
 
 		this.cardImage.addEventListener('click', () =>
 			this.events.emit('card:select', { card: this })
@@ -39,33 +39,54 @@ export class Card {
 		return this.likeButton.classList.contains('card__like-button_is-active');
 	}
 
-	setData(cardData: ICard, userId: string) {
-		this.cardId = cardData._id;
-		const cardIsLiked = cardData?.likes.some((like) => like._id === userId);
+	render(data?: Partial<ICard>): HTMLElement;
+	render(cardData: Partial<ICard>, userId: string): HTMLElement;
+
+	render(cardData: Partial<ICard> | undefined, userId?: string) {
+		if (!cardData) return this.container;
+
+		const { likes, owner, ...otherCardData } = cardData;
+		if (userId) {
+			if (likes) this.likes = { likes, userId };
+			if (owner) this.owner = { owner, userId };
+		}
+		return super.render(otherCardData);
+	}
+
+	set likes({ likes, userId }: { likes: IUser[]; userId: string }) {
+		const cardIsLiked = likes.some((like) => like._id === userId);
 		this.likeButton.classList.toggle(
 			'card__like-button_is-active',
 			cardIsLiked
 		);
-		this.likesCount.textContent = String(cardData.likes.length);
+		this.likesCount.textContent = String(likes.length);
+	}
 
-		if (cardData.owner._id !== userId) {
+	set owner({ owner, userId }: { owner: IUser; userId: string }) {
+		if (owner._id !== userId) {
 			this.deleteButton.style.display = 'none';
 		} else {
 			this.deleteButton.style.display = 'inherit';
 		}
-		this.cardImage.style.backgroundImage = `url(${cardData.link})`;
-		this.cardTitle.textContent = cardData.name;
 	}
 
-	get id() {
+	set link(link: string) {
+		this.cardImage.style.backgroundImage = `url(${link})`;
+	}
+
+	set name(name: string) {
+		this.cardTitle.textContent = name;
+	}
+
+	set _id(id) {
+		this.cardId = id;
+	}
+	get _id() {
 		return this.cardId;
 	}
 
 	deleteCard() {
-		this.element.remove();
-		this.element = null;
-	}
-	render() {
-		return this.element;
+		this.container.remove();
+		this.container = null;
 	}
 }
