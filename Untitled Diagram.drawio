@@ -1,12 +1,9 @@
-<mxfile host="app.diagrams.net" modified="2024-07-01T03:56:48.404Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="g9yAOdGOoTJ7fnklau6t" version="24.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-22T23:01:56.036Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="CdN5_2tJON-JX1RQseXm" version="24.6.5" type="github">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
-    <mxGraphModel dx="2557" dy="1120" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-63" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
-          <mxGeometry x="-1050" y="120" width="1020" height="270" as="geometry" />
-        </mxCell>
         <mxCell id="2" value="Thread 1" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
           <mxGeometry x="164.5" y="128" width="280" height="570" as="geometry" />
         </mxCell>
@@ -145,86 +142,6 @@
         </mxCell>
         <mxCell id="20" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="1" source="10" target="18" edge="1">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-41" value="List" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="200" y="826" width="140" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-42" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="ZlkHjNZaexF3SYRSjPmH-41" vertex="1">
-          <mxGeometry y="30" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-43" value="Item 2: void&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="ZlkHjNZaexF3SYRSjPmH-41" vertex="1">
-          <mxGeometry y="60" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-45" value="Item 2: void&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="ZlkHjNZaexF3SYRSjPmH-41" vertex="1">
-          <mxGeometry y="90" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-44" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="ZlkHjNZaexF3SYRSjPmH-41" vertex="1">
-          <mxGeometry y="120" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-47" value="List" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="530" y="841" width="140" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-48" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="ZlkHjNZaexF3SYRSjPmH-47" vertex="1">
-          <mxGeometry y="30" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-49" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="ZlkHjNZaexF3SYRSjPmH-47" vertex="1">
-          <mxGeometry y="60" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-50" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="ZlkHjNZaexF3SYRSjPmH-47" vertex="1">
-          <mxGeometry y="90" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ZlkHjNZaexF3SYRSjPmH-43" target="ZlkHjNZaexF3SYRSjPmH-47" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="600" y="901" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-52" value="Название карточки&amp;nbsp;&lt;div&gt;Картинка&amp;nbsp;&lt;/div&gt;&lt;div&gt;Количество лайков&lt;/div&gt;&lt;div&gt;Статус лайка&amp;nbsp;&lt;/div&gt;&lt;div&gt;Вледелец&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-920" y="170" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-53" value="Имя пользователя&amp;nbsp;&lt;div&gt;О себе&amp;nbsp;&lt;/div&gt;&lt;div&gt;Аватар&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-920" y="310" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-54" value="Карточка" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="170" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-55" value="Пользователь" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="310" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-56" value="Поставить / снять лайка&lt;div&gt;Посмотреть картинку&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-470" y="170" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-57" value="Изменить имя / о себе&lt;div&gt;Изменить ссылку на аватар&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-470" y="310" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-58" value="&lt;u&gt;&lt;b&gt;Католог карточек&lt;/b&gt;&lt;/u&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить массив карточек&lt;/div&gt;&lt;div&gt;&lt;u&gt;Добавить одну карточку&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;Удалить карточку&amp;nbsp;&lt;/u&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-210" y="170" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-71" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
-          <mxGeometry x="-1050" y="520" width="1020" height="270" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-72" value="Компонент" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-920" y="570" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-73" value="Данные профиля&lt;div&gt;Карточка с фото&lt;/div&gt;&lt;div&gt;Модальное окно с формой&amp;nbsp;&lt;/div&gt;&lt;div&gt;Модальное окно с картинкой&amp;nbsp;&lt;/div&gt;&lt;div&gt;Модальное окно подтверждения&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-920" y="650" width="180" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-74" value="Название карточки&lt;div&gt;Картинка (ссылка)&lt;/div&gt;&lt;div&gt;Количество лайков&amp;nbsp;&lt;/div&gt;&lt;div&gt;Статус Лайка&amp;nbsp;&lt;/div&gt;&lt;div&gt;Владелец&lt;/div&gt;&lt;div&gt;Имя пользователя&amp;nbsp;&lt;/div&gt;&lt;div&gt;Имя о пользователе&amp;nbsp;&lt;/div&gt;&lt;div&gt;Аватар&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-680" y="620" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-85" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
-          <mxGeometry x="-1050" y="930" width="1020" height="270" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-86" value="Страницы и окна" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-920" y="949" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-87" value="Главная страница&lt;div&gt;Модальное окно с формой карточки&amp;nbsp;&lt;/div&gt;&lt;div&gt;Модальное окно с формой пользователя&amp;nbsp;&lt;/div&gt;&lt;div&gt;Модальное окно с формой аватара&lt;/div&gt;&lt;div&gt;Модальное окно с большой картинкой&amp;nbsp;&lt;/div&gt;&lt;div&gt;Модальное окно подтверждения&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-920" y="1060" width="180" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-88" value="Карточка&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div&gt;Данные профиля&amp;nbsp;&lt;/div&gt;&lt;div&gt;Модалка с формой&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Модалка с картинкой&amp;nbsp;&lt;/div&gt;&lt;div&gt;Модалка подтверждения&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-680" y="1030" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZlkHjNZaexF3SYRSjPmH-89" value="Карточка&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div&gt;Пользователь&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-470" y="1030" width="150" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
